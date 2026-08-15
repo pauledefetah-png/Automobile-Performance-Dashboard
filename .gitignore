@@ -1,0 +1,8 @@
+# Power BI temp/cache
+*.pbix.lock
+~$*
+.pbi/
+
+# OS
+.DS_Store
+Thumbs.db
