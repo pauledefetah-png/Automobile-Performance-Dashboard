@@ -18,7 +18,7 @@ The report answers three questions:
 
 ## Data source
 
-[`Automobile_data.csv`](Automobile_data.csv) — 205 rows, 26 attributes per vehicle (make, body style, drive wheels, engine specs, MPG, price, etc.), based on the classic 1985 Ward's Automotive Yearbook automobile dataset.
+[`data/Automobile_data.csv`](data/Automobile_data.csv) — 205 rows, 26 attributes per vehicle (make, body style, drive wheels, engine specs, MPG, price, etc.), based on the classic 1985 Ward's Automotive Yearbook automobile dataset.
 
 The raw data arrived messy: missing values were encoded as `?` rather than blank, spread across several fields —
 
@@ -38,7 +38,7 @@ Cleaning and handling these gaps in Power Query — without silently dropping ro
 
 Rather than reporting directly off the flat CSV, the data was restructured into a star schema: one fact table (`Automobile`) plus five dimension tables (`Dim_Vehicle_Brand`, `Dim_BodyStyle`, `Dim_Drive_Wheels`, `Dim_Fuel_Type`, `Dim_Price_Band`). Fields were renamed to business-friendly labels and a derived field (average city+highway MPG) was added for the KPI cards.
 
-Full breakdown of the model, field renames, and every visual's fields: [`data-model.md`](data-model.md).
+Full breakdown of the model, field renames, and every visual's fields: [`docs/data-model.md`](docs/data-model.md).
 
 ## What's in the report
 
@@ -67,21 +67,24 @@ Full breakdown of the model, field renames, and every visual's fields: [`data-mo
 - Interactive report design: filters, KPIs, correlation visuals, treemap
 - Turning a raw dataset into a decision-ready, narrative dashboard
 
-## Repo contents
+## Repo structure
 
-| File | Description |
-|---|---|
-| [`README.md`](README.md) | This file |
-| [`Automobile_data.csv`](Automobile_data.csv) | Source dataset (205 rows, 26 attributes) |
-| [`Automobile Dashboard Visualization.pbix`](<Automobile Dashboard Visualization.pbix>) | Power BI report |
-| [`data-model.md`](data-model.md) | Star schema, field mapping, visual-by-visual breakdown |
-| [`.gitignore`](.gitignore) | Excludes Power BI temp files and OS clutter |
+```
+automobile-performance-dashboard/
+├── data/
+│   └── Automobile_data.csv          # source dataset
+├── dashboard/
+│   └── Automobile Dashboard Visualization.pbix   # Power BI report
+├── docs/
+│   └── data-model.md                # star schema, field mapping, visual-by-visual breakdown
+└── README.md
+```
 
 ## Reproducing this
 
 1. Install [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop) (free, Windows only).
-2. Open `Automobile Dashboard Visualization.pbix`.
-3. The data source points at `Automobile_data.csv` — if you relocate the file, update the source path in Power Query (Transform Data → Data Source Settings).
+2. Open `dashboard/Automobile Dashboard Visualization.pbix`.
+3. The data source points at `data/Automobile_data.csv` — if you relocate the file, update the source path in Power Query (Transform Data → Data Source Settings).
 
 ## Attribution
 
