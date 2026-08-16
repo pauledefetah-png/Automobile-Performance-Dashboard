@@ -40,6 +40,10 @@ Rather than reporting directly off the flat CSV, the data was restructured into 
 
 Full breakdown of the model, field renames, and every visual's fields: [`docs/data-model.md`](docs/data-model.md).
 
+## Screenshots
+
+![Dashboard overview — Automobile Market Analysis Report](screenshots/dashboard-overview.png)
+
 ## What's in the report
 
 **Page 1 — Overview**
