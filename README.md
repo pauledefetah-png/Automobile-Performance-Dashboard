@@ -42,7 +42,7 @@ Full breakdown of the model, field renames, and every visual's fields: [`docs/da
 
 ## Screenshots
 
-![Dashboard overview — Automobile Market Analysis Report](screenshots/dashboard-overview.png)
+![Dashboard overview — Automobile Market Analysis Report](screenshots/Dashboard_Overview.png)
 
 ## What's in the report
 
